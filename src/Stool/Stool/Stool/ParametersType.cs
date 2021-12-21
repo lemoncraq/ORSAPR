@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoolBuilder
+namespace Stool
 {
-    public class Builder
+    class ParametersType
     {
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KOMPASConnector
+namespace StoolBuilder
 {
-    public class KOMPASConnector
+    class StoolModelBuilder
     {
     }
 }
