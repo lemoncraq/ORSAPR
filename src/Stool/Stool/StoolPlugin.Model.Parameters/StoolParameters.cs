@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace StoolPlugin.Model.Parameters
 {
+    /// <summary>
+    /// Класс параметров табурета
+    /// </summary>
     public class StoolParameters
     {
     }

@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StoolPlugin.Model.Kompas\StoolPlugin.Model.Kompas.csproj">
+      <Project>{26c55a65-ead2-426c-bcb9-ea7e791b35d1}</Project>
+      <Name>StoolPlugin.Model.Kompas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoolPlugin.Model.Parameters\StoolPlugin.Model.Parameters.csproj">
+      <Project>{d92e0bf1-7a5b-45e6-b232-51245564b3bb}</Project>
+      <Name>StoolPlugin.Model.Parameters</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
