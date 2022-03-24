@@ -3,7 +3,7 @@
     /// <summary>
     /// Перечисление параметров табурета
     /// </summary>
-    public enum ParameterType
+   public enum ParameterType
     {
         /// <summary>
         /// Длина сиденья
@@ -21,13 +21,13 @@
         StoolTopThickness,
 
         /// <summary>
-        /// Высота ножек сиденья
+        /// Высота ножек
         /// </summary>
         StoolLegsHeight,
 
         /// <summary>
-        /// Значение основания ножек сиденья
+        /// Значение основания ножек
         /// </summary>
-        StoolLegsBase
+        StoolLegsBase,
     }
 }

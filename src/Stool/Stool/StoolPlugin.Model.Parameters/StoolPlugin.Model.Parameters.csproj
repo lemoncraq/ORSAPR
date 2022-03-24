@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D92E0BF1-7A5B-45E6-B232-51245564B3BB}</ProjectGuid>
+    <ProjectGuid>{68F9904C-4625-4D23-9B78-1A377C7497A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StoolPlugin.Model.Parameters</RootNamespace>
@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parameter.cs" />
     <Compile Include="ParameterType.cs" />
-    <Compile Include="StoolParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoolParameters.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

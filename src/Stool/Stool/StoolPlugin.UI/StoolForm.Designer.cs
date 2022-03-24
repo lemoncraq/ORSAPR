@@ -1,16 +1,17 @@
-﻿namespace StoolPlugin.UI
+﻿
+namespace StoolPlugin.UI
 {
-    partial class StoolForm
+    partial class StoolPluginForm
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Освободить все используемые ресурсы.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,278 +21,272 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Требуемый метод для поддержки конструктора — не изменяйте 
+        /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
-            this.stoolTopGroupBox = new System.Windows.Forms.GroupBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.stoolLegsGroupBox = new System.Windows.Forms.GroupBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.BuildButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.StoolLegsHeightNum = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.StoolLegsBaseNum = new System.Windows.Forms.NumericUpDown();
+            this.legsParameters = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.StoolTopLengthNum = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.StoolTopWidthNum = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.StoolTopThicknessNum = new System.Windows.Forms.NumericUpDown();
+            this.stoolTopGroupBox = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolLegsHeightNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolLegsBaseNum)).BeginInit();
+            this.legsParameters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolTopLengthNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolTopWidthNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolTopThicknessNum)).BeginInit();
             this.stoolTopGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.stoolLegsGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // stoolTopGroupBox
-            // 
-            this.stoolTopGroupBox.Controls.Add(this.numericUpDown3);
-            this.stoolTopGroupBox.Controls.Add(this.numericUpDown2);
-            this.stoolTopGroupBox.Controls.Add(this.numericUpDown1);
-            this.stoolTopGroupBox.Controls.Add(this.label3);
-            this.stoolTopGroupBox.Controls.Add(this.label2);
-            this.stoolTopGroupBox.Controls.Add(this.label1);
-            this.stoolTopGroupBox.Location = new System.Drawing.Point(12, 12);
-            this.stoolTopGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.stoolTopGroupBox.Name = "stoolTopGroupBox";
-            this.stoolTopGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.stoolTopGroupBox.Size = new System.Drawing.Size(263, 121);
-            this.stoolTopGroupBox.TabIndex = 0;
-            this.stoolTopGroupBox.TabStop = false;
-            this.stoolTopGroupBox.Text = "Параметры сиденья";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(171, 87);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            35,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown3.TabIndex = 5;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(171, 58);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            600,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown2.TabIndex = 4;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(171, 27);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            400,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Толщина (20 - 35 мм)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ширина (300 - 600 мм)";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Длина (300 - 400 мм)";
-            // 
-            // stoolLegsGroupBox
-            // 
-            this.stoolLegsGroupBox.Controls.Add(this.numericUpDown5);
-            this.stoolLegsGroupBox.Controls.Add(this.numericUpDown4);
-            this.stoolLegsGroupBox.Controls.Add(this.label5);
-            this.stoolLegsGroupBox.Controls.Add(this.label4);
-            this.stoolLegsGroupBox.Location = new System.Drawing.Point(12, 138);
-            this.stoolLegsGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.stoolLegsGroupBox.Name = "stoolLegsGroupBox";
-            this.stoolLegsGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.stoolLegsGroupBox.Size = new System.Drawing.Size(263, 90);
-            this.stoolLegsGroupBox.TabIndex = 1;
-            this.stoolLegsGroupBox.TabStop = false;
-            this.stoolLegsGroupBox.Text = "Параметры ножек";
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(171, 58);
-            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Minimum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown5.TabIndex = 5;
-            this.numericUpDown5.Value = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(171, 27);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            400,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown4.TabIndex = 4;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Ширина (25 - 35 мм)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Высота (300 - 400 мм)";
             // 
             // BuildButton
             // 
-            this.BuildButton.Location = new System.Drawing.Point(88, 233);
-            this.BuildButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BuildButton.Location = new System.Drawing.Point(34, 276);
+            this.BuildButton.Margin = new System.Windows.Forms.Padding(4);
             this.BuildButton.Name = "BuildButton";
-            this.BuildButton.Size = new System.Drawing.Size(120, 42);
+            this.BuildButton.Size = new System.Drawing.Size(225, 43);
             this.BuildButton.TabIndex = 2;
             this.BuildButton.Text = "Построить";
             this.BuildButton.UseVisualStyleBackColor = true;
             this.BuildButton.Click += new System.EventHandler(this.BuildButton_Click);
             // 
-            // StoolForm
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 32);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Высота (300 - 400) мм";
+            // 
+            // StoolLegsHeightNum
+            // 
+            this.StoolLegsHeightNum.Location = new System.Drawing.Point(192, 28);
+            this.StoolLegsHeightNum.Margin = new System.Windows.Forms.Padding(4);
+            this.StoolLegsHeightNum.Maximum = new decimal(new int[] {
+            400,
+            0,
+            0,
+            0});
+            this.StoolLegsHeightNum.Name = "StoolLegsHeightNum";
+            this.StoolLegsHeightNum.Size = new System.Drawing.Size(67, 22);
+            this.StoolLegsHeightNum.TabIndex = 1;
+            this.StoolLegsHeightNum.Value = new decimal(new int[] {
+            350,
+            0,
+            0,
+            0});
+            this.StoolLegsHeightNum.ValueChanged += new System.EventHandler(this.AnyValueNumericUpDown_ValueChanged);
+            this.StoolLegsHeightNum.Validating += new System.ComponentModel.CancelEventHandler(this.AnyValueNumericUpDown_Validating);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 74);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 16);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Основание (25 - 35) мм";
+            // 
+            // StoolLegsBaseNum
+            // 
+            this.StoolLegsBaseNum.Location = new System.Drawing.Point(192, 70);
+            this.StoolLegsBaseNum.Margin = new System.Windows.Forms.Padding(4);
+            this.StoolLegsBaseNum.Maximum = new decimal(new int[] {
+            35,
+            0,
+            0,
+            0});
+            this.StoolLegsBaseNum.Name = "StoolLegsBaseNum";
+            this.StoolLegsBaseNum.Size = new System.Drawing.Size(67, 22);
+            this.StoolLegsBaseNum.TabIndex = 3;
+            this.StoolLegsBaseNum.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.StoolLegsBaseNum.ValueChanged += new System.EventHandler(this.AnyValueNumericUpDown_ValueChanged);
+            this.StoolLegsBaseNum.Validating += new System.ComponentModel.CancelEventHandler(this.AnyValueNumericUpDown_Validating);
+            // 
+            // legsParameters
+            // 
+            this.legsParameters.Controls.Add(this.StoolLegsBaseNum);
+            this.legsParameters.Controls.Add(this.label5);
+            this.legsParameters.Controls.Add(this.StoolLegsHeightNum);
+            this.legsParameters.Controls.Add(this.label6);
+            this.legsParameters.Location = new System.Drawing.Point(13, 166);
+            this.legsParameters.Margin = new System.Windows.Forms.Padding(4);
+            this.legsParameters.Name = "legsParameters";
+            this.legsParameters.Padding = new System.Windows.Forms.Padding(4);
+            this.legsParameters.Size = new System.Drawing.Size(267, 102);
+            this.legsParameters.TabIndex = 1;
+            this.legsParameters.TabStop = false;
+            this.legsParameters.Text = "Параметры ножек";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Длина (300 - 400) мм";
+            // 
+            // StoolTopLengthNum
+            // 
+            this.StoolTopLengthNum.Location = new System.Drawing.Point(192, 28);
+            this.StoolTopLengthNum.Margin = new System.Windows.Forms.Padding(4);
+            this.StoolTopLengthNum.Maximum = new decimal(new int[] {
+            400,
+            0,
+            0,
+            0});
+            this.StoolTopLengthNum.Name = "StoolTopLengthNum";
+            this.StoolTopLengthNum.Size = new System.Drawing.Size(67, 22);
+            this.StoolTopLengthNum.TabIndex = 1;
+            this.StoolTopLengthNum.Value = new decimal(new int[] {
+            350,
+            0,
+            0,
+            0});
+            this.StoolTopLengthNum.ValueChanged += new System.EventHandler(this.AnyValueNumericUpDown_ValueChanged);
+            this.StoolTopLengthNum.Validating += new System.ComponentModel.CancelEventHandler(this.AnyValueNumericUpDown_Validating);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Ширина (300 - 600) мм";
+            // 
+            // StoolTopWidthNum
+            // 
+            this.StoolTopWidthNum.Location = new System.Drawing.Point(192, 70);
+            this.StoolTopWidthNum.Margin = new System.Windows.Forms.Padding(4);
+            this.StoolTopWidthNum.Maximum = new decimal(new int[] {
+            600,
+            0,
+            0,
+            0});
+            this.StoolTopWidthNum.Name = "StoolTopWidthNum";
+            this.StoolTopWidthNum.Size = new System.Drawing.Size(67, 22);
+            this.StoolTopWidthNum.TabIndex = 3;
+            this.StoolTopWidthNum.Value = new decimal(new int[] {
+            350,
+            0,
+            0,
+            0});
+            this.StoolTopWidthNum.ValueChanged += new System.EventHandler(this.AnyValueNumericUpDown_ValueChanged);
+            this.StoolTopWidthNum.Validating += new System.ComponentModel.CancelEventHandler(this.AnyValueNumericUpDown_Validating);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Толщина (20 - 35) мм";
+            // 
+            // StoolTopThicknessNum
+            // 
+            this.StoolTopThicknessNum.Location = new System.Drawing.Point(192, 112);
+            this.StoolTopThicknessNum.Margin = new System.Windows.Forms.Padding(4);
+            this.StoolTopThicknessNum.Maximum = new decimal(new int[] {
+            35,
+            0,
+            0,
+            0});
+            this.StoolTopThicknessNum.Name = "StoolTopThicknessNum";
+            this.StoolTopThicknessNum.Size = new System.Drawing.Size(67, 22);
+            this.StoolTopThicknessNum.TabIndex = 5;
+            this.StoolTopThicknessNum.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.StoolTopThicknessNum.ValueChanged += new System.EventHandler(this.AnyValueNumericUpDown_ValueChanged);
+            this.StoolTopThicknessNum.Validating += new System.ComponentModel.CancelEventHandler(this.AnyValueNumericUpDown_Validating);
+            // 
+            // stoolTopGroupBox
+            // 
+            this.stoolTopGroupBox.Controls.Add(this.StoolTopThicknessNum);
+            this.stoolTopGroupBox.Controls.Add(this.label3);
+            this.stoolTopGroupBox.Controls.Add(this.StoolTopWidthNum);
+            this.stoolTopGroupBox.Controls.Add(this.label2);
+            this.stoolTopGroupBox.Controls.Add(this.StoolTopLengthNum);
+            this.stoolTopGroupBox.Controls.Add(this.label1);
+            this.stoolTopGroupBox.Location = new System.Drawing.Point(13, 13);
+            this.stoolTopGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.stoolTopGroupBox.Name = "stoolTopGroupBox";
+            this.stoolTopGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.stoolTopGroupBox.Size = new System.Drawing.Size(267, 145);
+            this.stoolTopGroupBox.TabIndex = 0;
+            this.stoolTopGroupBox.TabStop = false;
+            this.stoolTopGroupBox.Text = "Параметры сиденья";
+            // 
+            // StoolPluginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 284);
+            this.ClientSize = new System.Drawing.Size(292, 333);
             this.Controls.Add(this.BuildButton);
-            this.Controls.Add(this.stoolLegsGroupBox);
+            this.Controls.Add(this.legsParameters);
             this.Controls.Add(this.stoolTopGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "StoolForm";
-            this.Text = "Табурет";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(310, 380);
+            this.MinimumSize = new System.Drawing.Size(310, 380);
+            this.Name = "StoolPluginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Плагин для построения табурета";
+            ((System.ComponentModel.ISupportInitialize)(this.StoolLegsHeightNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolLegsBaseNum)).EndInit();
+            this.legsParameters.ResumeLayout(false);
+            this.legsParameters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolTopLengthNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolTopWidthNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoolTopThicknessNum)).EndInit();
             this.stoolTopGroupBox.ResumeLayout(false);
             this.stoolTopGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.stoolLegsGroupBox.ResumeLayout(false);
-            this.stoolLegsGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox stoolTopGroupBox;
-        private System.Windows.Forms.GroupBox stoolLegsGroupBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.Button BuildButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown StoolLegsHeightNum;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown StoolLegsBaseNum;
+        private System.Windows.Forms.GroupBox legsParameters;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown StoolTopLengthNum;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown StoolTopWidthNum;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown StoolTopThicknessNum;
+        private System.Windows.Forms.GroupBox stoolTopGroupBox;
     }
 }
 

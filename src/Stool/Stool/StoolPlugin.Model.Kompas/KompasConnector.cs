@@ -31,7 +31,7 @@ namespace StoolPlugin.Model.Kompas
             {
                 KsObject = (KompasObject)Marshal.GetActiveObject(progId);
             }
-            catch (COMException)
+            catch(COMException)
             {
                 KsObject = (KompasObject)Activator.
                     CreateInstance(Type.GetTypeFromProgID(progId));

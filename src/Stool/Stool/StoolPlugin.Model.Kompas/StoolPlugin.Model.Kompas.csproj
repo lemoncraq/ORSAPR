@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{26C55A65-EAD2-426C-BCB9-EA7E791B35D1}</ProjectGuid>
+    <ProjectGuid>{12C10689-6A54-4701-B489-4613C2A04B2E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StoolPlugin.Model.Kompas</RootNamespace>
@@ -31,6 +31,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="KAPITypes, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\KAPITypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Kompas6API5">
+      <HintPath>lib\Kompas6API5.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Kompas6Constants">
+      <HintPath>lib\Kompas6Constants.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Kompas6Constants3D">
+      <HintPath>lib\Kompas6Constants3D.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="KompasAPI7">
+      <HintPath>lib\KompasAPI7.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,41 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KompasConnector.cs" />
-    <Compile Include="StoolBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="Kompas6API5">
-      <Guid>{0422828C-F174-495E-AC5D-D31014DBBE87}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Kompas6Constants">
-      <Guid>{75C9F5D0-B5B8-4526-8681-9903C567D2ED}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Kompas6Constants3D">
-      <Guid>{2CAF168C-7961-4B90-9DA2-701419BEEFE3}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
+    <Compile Include="StoolBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StoolPlugin.Model.Parameters\StoolPlugin.Model.Parameters.csproj">
-      <Project>{d92e0bf1-7a5b-45e6-b232-51245564b3bb}</Project>
+      <Project>{68f9904c-4625-4d23-9b78-1a377c7497a7}</Project>
       <Name>StoolPlugin.Model.Parameters</Name>
     </ProjectReference>
   </ItemGroup>
