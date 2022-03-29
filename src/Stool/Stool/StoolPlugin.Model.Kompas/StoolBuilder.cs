@@ -18,26 +18,26 @@ namespace StoolPlugin.Model.Kompas
         /// <summary>
         /// Класс параметров стола
         /// </summary>
-        private StoolParameters _tableParameters;
-        
+        private StoolParameters _stoolParameters;
+
         /// <summary>
         /// Метод для построения 3D модели
         /// </summary>
-        /// <param name="tableParameters">Параметры стола</param>
-        /// <param name="legsType">Тип ножек стола</param>
-        public void Build(StoolParameters tableParameters)
+        /// <param name="stoolParameters">Параметры табурета</param>
+        /// <param name="legsType">Тип ножек табурета</param>
+        public void Build(StoolParameters stoolParameters)
         {
-            _tableParameters = tableParameters;
+            _stoolParameters = stoolParameters;
             _kompasConnector = new KompasConnector();
 
-            CreateTopTable();
-            CreateTableLegs();
+            CreateTopStool();
+            CreateStoolLegs();
         }
 
         /// <summary>
-        /// Метод для построения столешницы
+        /// Метод для построения сиденья
         /// </summary>
-        private void CreateTopTable() 
+        private void CreateTopStool() 
         {
             var sketchDef = CreateSketch(Obj3dType.o3d_planeXOY);
             var doc2D = (ksDocument2D)sketchDef.BeginEdit();
@@ -50,49 +50,49 @@ namespace StoolPlugin.Model.Kompas
             rectangleParam.x = 0;
             rectangleParam.y = 0;
             rectangleParam.ang = 0;
-            rectangleParam.height = _tableParameters.
+            rectangleParam.height = _stoolParameters.
                 GetValue(ParameterType.StoolTopWidth);
-            rectangleParam.width = _tableParameters.
+            rectangleParam.width = _stoolParameters.
                 GetValue(ParameterType.StoolTopLength);
             rectangleParam.style = 1;
             doc2D.ksRectangle(rectangleParam);
             sketchDef.EndEdit();
-            PressOutSketch(sketchDef, _tableParameters.
+            PressOutSketch(sketchDef, _stoolParameters.
                 GetValue(ParameterType.StoolTopThickness));
         }
 
         /// <summary>
-        /// Метод для построения ножек стола
+        /// Метод для построения ножек табурета
         /// </summary>
-        private void CreateTableLegs()
+        private void CreateStoolLegs()
         {
             var sketchDef = CreateSketch(Obj3dType.o3d_planeXOY);
             var doc2D = (ksDocument2D)sketchDef.BeginEdit();
 
             const double offsetCoordinate = 30.0;
-            double legsValue = _tableParameters.
+            double legsValue = _stoolParameters.
                 GetValue(ParameterType.StoolLegsBase);
 
-            // Координаты центров ножек стола
+            // Координаты центров ножек табурета
             var x = new double[4];
             var y = new double[4];
 
             x[0] = offsetCoordinate + (legsValue / 2.0);
             y[0] = offsetCoordinate + (legsValue / 2.0);
 
-            x[1] = _tableParameters.
+            x[1] = _stoolParameters.
                        GetValue(ParameterType.StoolTopLength)
                    - (legsValue / 2.0) - offsetCoordinate;
-            y[1] = _tableParameters.GetValue(
+            y[1] = _stoolParameters.GetValue(
                     ParameterType.StoolTopWidth) - (legsValue / 2.0)
                                                  - offsetCoordinate;
 
             x[2] = offsetCoordinate + (legsValue / 2.0);
-            y[2] = _tableParameters.GetValue(
+            y[2] = _stoolParameters.GetValue(
                     ParameterType.StoolTopWidth) - (legsValue / 2.0)
                                                  - offsetCoordinate;
 
-            x[3] = _tableParameters.GetValue(
+            x[3] = _stoolParameters.GetValue(
                     ParameterType.StoolTopLength) - (legsValue / 2.0)
                                                   - offsetCoordinate;
             y[3] = (legsValue / 2.0) + offsetCoordinate;
@@ -104,24 +104,24 @@ namespace StoolPlugin.Model.Kompas
                     KsObject.GetParamStruct((short)StructType2DEnum.
                         ko_RectangleParam);
                 rectagleParam.x = x[i] -
-                                  (_tableParameters.
+                                  (_stoolParameters.
                                       GetValue(ParameterType.
                                           StoolLegsBase) / 2.0);
                 rectagleParam.y = y[i] -
-                                  (_tableParameters.
+                                  (_stoolParameters.
                                       GetValue(ParameterType.
                                           StoolLegsBase) / 2.0);
                 rectagleParam.ang = 0;
-                rectagleParam.height = _tableParameters.
+                rectagleParam.height = _stoolParameters.
                     GetValue(ParameterType.StoolLegsBase);
-                rectagleParam.width = _tableParameters.
+                rectagleParam.width = _stoolParameters.
                     GetValue(ParameterType.StoolLegsBase);
                 rectagleParam.style = 1;
                 doc2D.ksRectangle(rectagleParam);
             }
 
             sketchDef.EndEdit();
-            PressOutSketch(sketchDef, _tableParameters.
+            PressOutSketch(sketchDef, _stoolParameters.
                 GetValue(ParameterType.StoolLegsHeight), side: false);
         }
 

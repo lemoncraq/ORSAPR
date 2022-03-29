@@ -99,7 +99,7 @@ namespace StoolPlugin.Model.Parameters
                 case ParameterType.StoolTopThickness:
                 {
                         minValue =
-                            SetValueTotalHeightTable(ParameterType.
+                            SetValueTotalHeightStool(ParameterType.
                                 StoolTopThickness,
                                 MinStoolTopThickness, 
                                 ParameterType.
@@ -109,7 +109,7 @@ namespace StoolPlugin.Model.Parameters
                 case ParameterType.StoolLegsHeight:
                 {
                         minValue =
-                            SetValueTotalHeightTable(ParameterType.
+                            SetValueTotalHeightStool(ParameterType.
                                 StoolLegsHeight,
                                 MinStoolLegsHeight,
                                 ParameterType.
@@ -118,7 +118,7 @@ namespace StoolPlugin.Model.Parameters
                 }
                 case ParameterType.StoolLegsBase:
                 {
-                    maxValue = SetValueTableLegsBase(ParameterType.
+                    maxValue = SetValueStoolLegsBase(ParameterType.
                         StoolLegsBase,
                         MaxStoolLegsBase);
                         break;
@@ -140,14 +140,14 @@ namespace StoolPlugin.Model.Parameters
         /// <param name="minAllowedValue">Минимальное допустимое значение</param>
         /// <param name="depedentParameterType">Тип зависимого параметра</param>
         /// <returns></returns>
-        private int SetValueTotalHeightTable(ParameterType parameterType,
+        private int SetValueTotalHeightStool(ParameterType parameterType,
             int minAllowedValue, ParameterType depedentParameterType)
         {
             if (parameterType != ParameterType.StoolTopThickness
                 && parameterType != ParameterType.StoolLegsHeight)
             {
                 string textError = "Передан неправильный ParameterType " +
-                                   "в метод SetValueTableLegsBase";
+                                   "в метод SetValueStoolLegsBase";
                 throw new ArgumentException(textError);
             }
 
@@ -171,13 +171,13 @@ namespace StoolPlugin.Model.Parameters
         /// <param name="maxAllowedValue">
         /// Максимальное допустимое значение</param>
         /// <returns></returns>
-        private int SetValueTableLegsBase(ParameterType parameterType,
+        private int SetValueStoolLegsBase(ParameterType parameterType,
             int maxAllowedValue)
         {
             if (parameterType != ParameterType.StoolLegsBase)
             {
                 string textError = "Передан неправильный ParameterType " +
-                                   "в метод SetValueTableLegsBase";
+                                   "в метод SetValueStoolLegsBase";
                 throw new ArgumentException(textError);
             }
             var minimumValue = Math.
