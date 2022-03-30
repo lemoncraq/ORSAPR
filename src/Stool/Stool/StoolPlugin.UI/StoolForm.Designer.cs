@@ -42,6 +42,8 @@ namespace StoolPlugin.UI
             this.label3 = new System.Windows.Forms.Label();
             this.StoolTopThicknessNum = new System.Windows.Forms.NumericUpDown();
             this.stoolTopGroupBox = new System.Windows.Forms.GroupBox();
+            this.LegsTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StoolLegsHeightNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoolLegsBaseNum)).BeginInit();
             this.legsParameters.SuspendLayout();
@@ -53,7 +55,7 @@ namespace StoolPlugin.UI
             // 
             // BuildButton
             // 
-            this.BuildButton.Location = new System.Drawing.Point(34, 276);
+            this.BuildButton.Location = new System.Drawing.Point(34, 321);
             this.BuildButton.Margin = new System.Windows.Forms.Padding(4);
             this.BuildButton.Name = "BuildButton";
             this.BuildButton.Size = new System.Drawing.Size(225, 43);
@@ -124,6 +126,8 @@ namespace StoolPlugin.UI
             // 
             // legsParameters
             // 
+            this.legsParameters.Controls.Add(this.label4);
+            this.legsParameters.Controls.Add(this.LegsTypeComboBox);
             this.legsParameters.Controls.Add(this.StoolLegsBaseNum);
             this.legsParameters.Controls.Add(this.label5);
             this.legsParameters.Controls.Add(this.StoolLegsHeightNum);
@@ -132,7 +136,7 @@ namespace StoolPlugin.UI
             this.legsParameters.Margin = new System.Windows.Forms.Padding(4);
             this.legsParameters.Name = "legsParameters";
             this.legsParameters.Padding = new System.Windows.Forms.Padding(4);
-            this.legsParameters.Size = new System.Drawing.Size(267, 102);
+            this.legsParameters.Size = new System.Drawing.Size(267, 147);
             this.legsParameters.TabIndex = 1;
             this.legsParameters.TabStop = false;
             this.legsParameters.Text = "Параметры ножек";
@@ -244,18 +248,42 @@ namespace StoolPlugin.UI
             this.stoolTopGroupBox.TabStop = false;
             this.stoolTopGroupBox.Text = "Параметры сиденья";
             // 
+            // LegsTypeComboBox
+            // 
+            this.LegsTypeComboBox.FormattingEnabled = true;
+            this.LegsTypeComboBox.Items.AddRange(new object[] {
+            "квадратные",
+            "круглые",
+            "треугольные"});
+            this.LegsTypeComboBox.Location = new System.Drawing.Point(132, 112);
+            this.LegsTypeComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.LegsTypeComboBox.Name = "LegsTypeComboBox";
+            this.LegsTypeComboBox.Size = new System.Drawing.Size(127, 24);
+            this.LegsTypeComboBox.TabIndex = 8;
+            this.LegsTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.LegsTypeComboBox_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 116);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Тип ножек";
+            // 
             // StoolPluginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 333);
+            this.ClientSize = new System.Drawing.Size(292, 373);
             this.Controls.Add(this.BuildButton);
             this.Controls.Add(this.legsParameters);
             this.Controls.Add(this.stoolTopGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(310, 380);
-            this.MinimumSize = new System.Drawing.Size(310, 380);
+            this.MaximumSize = new System.Drawing.Size(310, 420);
+            this.MinimumSize = new System.Drawing.Size(310, 420);
             this.Name = "StoolPluginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Плагин для построения табурета";
@@ -287,6 +315,8 @@ namespace StoolPlugin.UI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown StoolTopThicknessNum;
         private System.Windows.Forms.GroupBox stoolTopGroupBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox LegsTypeComboBox;
     }
 }
 

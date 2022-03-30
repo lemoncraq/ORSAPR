@@ -44,7 +44,7 @@ namespace StoolPlugin.Model.Parameters
         /// <summary>
         /// Минимальная общая (толщина сиденья + высота ножек) высота табурета
         /// </summary>
-        private const int MinTotalHeightStool = 330;
+        private const int MinTotalHeightStool = 320;
 
         /// <summary>
         /// Словарь параметров класса <see cref="StoolParameters"/>

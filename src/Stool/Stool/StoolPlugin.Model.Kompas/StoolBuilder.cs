@@ -25,13 +25,13 @@ namespace StoolPlugin.Model.Kompas
         /// </summary>
         /// <param name="stoolParameters">Параметры табурета</param>
         /// <param name="legsType">Тип ножек табурета</param>
-        public void Build(StoolParameters stoolParameters)
+        public void Build(StoolParameters stoolParameters, LegsType legsType)
         {
             _stoolParameters = stoolParameters;
             _kompasConnector = new KompasConnector();
 
             CreateTopStool();
-            CreateStoolLegs();
+            CreateStoolLegs(legsType);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace StoolPlugin.Model.Kompas
         /// <summary>
         /// Метод для построения ножек табурета
         /// </summary>
-        private void CreateStoolLegs()
+        private void CreateStoolLegs(LegsType legsType)
         {
             var sketchDef = CreateSketch(Obj3dType.o3d_planeXOY);
             var doc2D = (ksDocument2D)sketchDef.BeginEdit();
@@ -97,27 +97,58 @@ namespace StoolPlugin.Model.Kompas
                                                   - offsetCoordinate;
             y[3] = (legsValue / 2.0) + offsetCoordinate;
 
-            // Создание квадратного основания ножек
-            for (int i = 0; i < x.Length; i++)
+            if (legsType == LegsType.SquareLegs)
             {
-                var rectagleParam = (ksRectangleParam)_kompasConnector.
-                    KsObject.GetParamStruct((short)StructType2DEnum.
-                        ko_RectangleParam);
-                rectagleParam.x = x[i] -
-                                  (_stoolParameters.
-                                      GetValue(ParameterType.
-                                          StoolLegsBase) / 2.0);
-                rectagleParam.y = y[i] -
-                                  (_stoolParameters.
-                                      GetValue(ParameterType.
-                                          StoolLegsBase) / 2.0);
-                rectagleParam.ang = 0;
-                rectagleParam.height = _stoolParameters.
-                    GetValue(ParameterType.StoolLegsBase);
-                rectagleParam.width = _stoolParameters.
-                    GetValue(ParameterType.StoolLegsBase);
-                rectagleParam.style = 1;
-                doc2D.ksRectangle(rectagleParam);
+                // Создание квадратного основания ножек
+                for (int i = 0; i < x.Length; i++)
+                {
+                    var rectagleParam = (ksRectangleParam)_kompasConnector.
+                        KsObject.GetParamStruct((short)StructType2DEnum.
+                            ko_RectangleParam);
+                    rectagleParam.x = x[i] -
+                                      (_stoolParameters.
+                                          GetValue(ParameterType.
+                                              StoolLegsBase) / 2.0);
+                    rectagleParam.y = y[i] -
+                                      (_stoolParameters.
+                                          GetValue(ParameterType.
+                                              StoolLegsBase) / 2.0);
+                    rectagleParam.ang = 0;
+                    rectagleParam.height = _stoolParameters.
+                        GetValue(ParameterType.StoolLegsBase);
+                    rectagleParam.width = _stoolParameters.
+                        GetValue(ParameterType.StoolLegsBase);
+                    rectagleParam.style = 1;
+                    doc2D.ksRectangle(rectagleParam);
+                }
+            }
+            else if (legsType == LegsType.RoundLegs)
+            {
+                // Создание круглого основания ножек
+                for (var i = 0; i < x.Length; i++)
+                {
+                    doc2D.ksCircle(x[i], y[i], (_stoolParameters.
+                        GetValue(ParameterType.StoolLegsBase) / 2.0), 1);
+                }
+            }
+            else if (legsType == LegsType.TriangularLegs)
+            {
+                // Создание треугольного основания ножек
+                for (int i = 0; i < x.Length; i++)
+                {
+                    var triangle = (ksRegularPolygonParam)
+                        (_kompasConnector.KsObject.GetParamStruct(92));
+                    triangle.count = 3;
+                    triangle.xc = x[i];
+                    triangle.yc = y[i];
+                    triangle.ang = 0;
+                    triangle.radius = (_stoolParameters.
+                                          GetValue(ParameterType.StoolLegsBase) / 2.0)
+                                      * 1.155;
+                    triangle.describe = false;
+                    triangle.style = 1;
+                    doc2D.ksRegularPolygon(triangle, 0);
+                }
             }
 
             sketchDef.EndEdit();

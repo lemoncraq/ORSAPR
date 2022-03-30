@@ -28,6 +28,12 @@ namespace StoolPlugin.UI
         private StoolParameters _stoolParameters;
 
         /// <summary>
+        /// Тип ножек табурета
+        /// По умолчанию заданы квадратные ножки табурета.
+        /// </summary>
+        private LegsType _legsType = LegsType.SquareLegs;
+
+        /// <summary>
         /// Словарь ошибок
         /// </summary>
         private Dictionary<ParameterType, string> _errors 
@@ -40,6 +46,8 @@ namespace StoolPlugin.UI
         {
             InitializeComponent();
               _stoolParameters = new StoolParameters();
+              LegsTypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+              LegsTypeComboBox.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -74,7 +82,7 @@ namespace StoolPlugin.UI
             try
             {
                 _stoolBuilder = _stoolBuilder ?? new StoolBuilder();
-               _stoolBuilder.Build(_stoolParameters);
+               _stoolBuilder.Build(_stoolParameters, _legsType);
             }
             catch (ApplicationException exception)
             {
@@ -180,6 +188,28 @@ namespace StoolPlugin.UI
             }
             SetValueParameter(numericUpDown,
                 FindParameters(numericUpDown.Name));
+        }
+
+        private void LegsTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (LegsTypeComboBox.SelectedIndex)
+            {
+                case 0:
+                {
+                    _legsType = LegsType.SquareLegs;
+                    break;
+                }
+                case 1:
+                {
+                    _legsType = LegsType.RoundLegs;
+                    break;
+                }
+                case 2:
+                {
+                    _legsType = LegsType.TriangularLegs;
+                    break;
+                }
+            }
         }
     }
 }
