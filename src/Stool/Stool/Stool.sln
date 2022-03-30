@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoolPlugin.UI", "StoolPlug
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoolPlugin.UnitTests", "StoolPlugin.UnitTests\StoolPlugin.UnitTests.csproj", "{48283E78-FD90-4939-89E0-99B54DDD5B35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StressTest", "StressTest\StressTest.csproj", "{A7AC4C19-8D52-4933-81CB-2271B11EE378}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{48283E78-FD90-4939-89E0-99B54DDD5B35}.Release|x64.Build.0 = Release|x64
 		{48283E78-FD90-4939-89E0-99B54DDD5B35}.Release|x86.ActiveCfg = Release|x86
 		{48283E78-FD90-4939-89E0-99B54DDD5B35}.Release|x86.Build.0 = Release|x86
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Debug|x64.Build.0 = Debug|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Debug|x86.Build.0 = Debug|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Release|x64.ActiveCfg = Release|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Release|x64.Build.0 = Release|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Release|x86.ActiveCfg = Release|Any CPU
+		{A7AC4C19-8D52-4933-81CB-2271B11EE378}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
