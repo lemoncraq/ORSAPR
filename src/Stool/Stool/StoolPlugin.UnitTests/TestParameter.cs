@@ -54,12 +54,12 @@ namespace StoolPlugin.UnitTests
                             "корректного значения свойста Name")]
         public void Test_Name_CorrectGetValue()
         {
-            var value = "Ножка стола";
+            var value = "Ножка табурета";
 
             var expected = value;
 
             var parameter = new Parameter(20, 50,
-                40, "Ножка стола");
+                40, "Ножка табурета");
 
             var actual = parameter.Name;
 

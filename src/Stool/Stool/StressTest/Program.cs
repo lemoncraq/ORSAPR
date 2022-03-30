@@ -12,16 +12,16 @@ namespace StressTest
         static void Main(string[] args)
         {
             var stoolParameters = new StoolParameters();
-            StoolBuilder tableBuilder = new StoolBuilder();
+            StoolBuilder stoolBuilder = new StoolBuilder();
             var stopWatch = new Stopwatch();
             stopWatch.Start();
             var streamWriter = new StreamWriter("LogAfterStressTest.txt",
                 true);
             var count = 0;
-            int maxTable = 100;
-            for (int i = 0; i < maxTable; i++)
+            int maxStool = 100;
+            for (int i = 0; i < maxStool; i++)
             {
-                tableBuilder.Build(stoolParameters, LegsType.RoundLegs);
+                stoolBuilder.Build(stoolParameters, LegsType.RoundLegs);
                 var computerInfo = new ComputerInfo();
                 var usedMemory = (computerInfo.TotalPhysicalMemory
                                   - computerInfo.AvailablePhysicalMemory)
